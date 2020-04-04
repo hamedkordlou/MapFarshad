@@ -1,1 +1,10 @@
-<p>menu works!</p>
+<form class="form-group"> 
+    
+    <select class="form-control" name="testSelect" id="testSelect" [(ngModel)]="selectedValue">
+        <option *ngFor="let opt of CCSs" [value]="opt.id"> {{opt.name}} </option>
+    </select>
+    <p *ngIf="selectedValue">
+        selected: {{ selectedValue }}
+    </p>
+
+</form>
